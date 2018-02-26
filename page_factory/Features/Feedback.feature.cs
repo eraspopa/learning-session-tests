@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace pure_selenium.Features
+namespace page_factory.Features
 {
     using TechTalk.SpecFlow;
     
@@ -87,7 +87,7 @@ this.FeatureBackground();
 #line 8
    testRunner.And(string.Format("click the grey navigation {0} link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
-   testRunner.Then(string.Format("I am redirected to the correct /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.Then(string.Format("I am redirected to the /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

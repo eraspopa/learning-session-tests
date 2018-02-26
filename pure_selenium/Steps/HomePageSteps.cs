@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using pure_selenium.Framework;
 using pure_selenium.PageObjects;
 using TechTalk.SpecFlow;
@@ -47,7 +49,7 @@ namespace pure_selenium.Steps
         {
             foreach (var row in table.Rows)
             {
-                Contains(row[1],_home.Footer.SocialLink(row[0]));
+                Contains(row[1],_home.Footer.SocialLink(row[0]).GetAttribute("href"));
             }
         }
         
@@ -63,12 +65,25 @@ namespace pure_selenium.Steps
         public void WhenINavigateToThePage(string page)
         {
             Visit(page);
+            Thread.Sleep(5000);
         }
 
         [Then(@"I am redirected to the correct (.*) url")]
         public void ThenIAmRedirectedToTheCorrectUrl(string url)
         {
             Contains(url,CurrentUrl());
+        }
+
+        [Then(@"at least (.*) images are shown on the main page")]
+        public void ThenAtLeastImagesAreShownOnTheMainPsge(int n)
+        {
+            IsTrue(_home.Main.GalleryImages().Count()>=n);
+        }
+
+        [Then(@"the images are displayed correctly")]
+        public void ThenTheImagesAreDisplayedCorrectly()
+        {
+            IsFalse(_home.Main.BrokenImagesExist());
         }
 
     }

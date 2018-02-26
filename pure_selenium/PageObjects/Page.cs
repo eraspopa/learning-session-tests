@@ -6,10 +6,11 @@
         {
             Header=new Header();
             Main= new Main();
+            Footer = new Footer();
         }
-        public Header Header { get; }
-        public Main Main { get; }
-        public Footer Footer { get; }
+        public Header Header { get; set; }
+        public Main Main { get; set; }
+        public Footer Footer { get; set; }
 
     }
 }

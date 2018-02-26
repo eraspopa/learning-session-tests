@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace pure_selenium.Features
+namespace page_factory.Features
 {
     using TechTalk.SpecFlow;
     
@@ -127,16 +127,12 @@ this.ScenarioSetup(scenarioInfo);
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "icon",
                         "url"});
             table2.AddRow(new string[] {
-                        "facebook",
                         "facebook.com/daehyun.kim"});
             table2.AddRow(new string[] {
-                        "pinterest",
                         "pinterest.com/pin/102245854017904870/?lp=true"});
             table2.AddRow(new string[] {
-                        "instagram",
                         "instagram.com/explore/tags/moonassi/"});
 #line 23
    testRunner.Then("social links have correct urls:", ((string)(null)), table2, "Then ");
@@ -147,23 +143,6 @@ this.FeatureBackground();
                         "Copyright © Your Website 2017"});
 #line 28
    testRunner.And("the copyright message is shown:", ((string)(null)), table3, "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The picture gallery is shown on the main page")]
-        public virtual void ThePictureGalleryIsShownOnTheMainPage()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The picture gallery is shown on the main page", ((string[])(null)));
-#line 32
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
-#line 33
-   testRunner.Then("at least 9 images are shown on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
-   testRunner.And("the images are displayed correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -21,14 +21,13 @@ Scenario: The artist's quote is shown on the home page
        
 Scenario: The footer contains correct social icons links and copyrite message
 			Then social links have correct urls:
-			| icon      | url                                           |
-			| facebook  | facebook.com/daehyun.kim                      |
-			| pinterest | pinterest.com/pin/102245854017904870/?lp=true |
-			| instagram | instagram.com/explore/tags/moonassi/          |
+			| url                                           |
+			| facebook.com/daehyun.kim                      |
+			| pinterest.com/pin/102245854017904870/?lp=true |
+			| instagram.com/explore/tags/moonassi/          |
 			And the copyright message is shown:
 			| message                       |
 			| Copyright © Your Website 2017 |
 
-Scenario: The picture gallery is shown on the main page
-			Then at least 9 images are shown on the main page
-			And the images are displayed correctly
+
+

@@ -11,6 +11,6 @@ namespace pure_selenium.PageObjects
         {
         }
         public void ClickHeaderLink(string link)=> driver.FindElement(By.XPath($"//nav[@class='site-navigation']//a[.='{link}']")).Click();
-        public string Copyright() => driver.FindElement(By.CssSelector(".social p")).Text;
+        public string Copyright() => driver.FindElement(By.CssSelector("p.m-0")).Text;
     }
 }
