@@ -11,7 +11,7 @@ namespace pure_selenium.PageObjects
         {
         }
 
-        public IWebElement SocialLink(string icon) => driver.FindElement(By.XPath($"//a[i[contains(@class,'fa-{icon}')]]"));
+        public string SocialLink(string icon)=>driver.FindElement(By.XPath($"./a[i[contains(@class,'fa-{icon}')]]")).GetAttribute("href");
         public string Copyright()=>driver.FindElement(By.CssSelector(".social p")).Text;
         
     }

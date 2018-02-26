@@ -62,9 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\Feedback.feature.cs">
+      <DependentUpon>Feedback.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Feedback.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\HomePage.feature.cs">
       <DependentUpon>HomePage.feature</DependentUpon>

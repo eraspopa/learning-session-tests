@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace pure_selenium.Features
+namespace learning_session_tests.Features
 {
     using TechTalk.SpecFlow;
     
@@ -147,23 +147,6 @@ this.FeatureBackground();
                         "Copyright © Your Website 2017"});
 #line 28
    testRunner.And("the copyright message is shown:", ((string)(null)), table3, "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The picture gallery is shown on the main page")]
-        public virtual void ThePictureGalleryIsShownOnTheMainPage()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The picture gallery is shown on the main page", ((string[])(null)));
-#line 32
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
-#line 33
-   testRunner.Then("at least 9 images are shown on the main page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
-   testRunner.And("the images are displayed correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

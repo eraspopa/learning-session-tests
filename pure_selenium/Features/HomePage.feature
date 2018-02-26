@@ -29,6 +29,5 @@ Scenario: The footer contains correct social icons links and copyrite message
 			| message                       |
 			| Copyright © Your Website 2017 |
 
-Scenario: The picture gallery is shown on the main page
-			Then at least 9 images are shown on the main page
-			And the images are displayed correctly
+
+

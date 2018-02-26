@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "learning-session-tests", "l
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pure_selenium", "pure_selenium\pure_selenium.csproj", "{EC513FE8-BC59-4F81-A0D4-2AE46106CE8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "page_factory", "page_factory\page_factory.csproj", "{FD06FC83-694C-4B57-A665-4B230453F7A4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{EC513FE8-BC59-4F81-A0D4-2AE46106CE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC513FE8-BC59-4F81-A0D4-2AE46106CE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC513FE8-BC59-4F81-A0D4-2AE46106CE8C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD06FC83-694C-4B57-A665-4B230453F7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD06FC83-694C-4B57-A665-4B230453F7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD06FC83-694C-4B57-A665-4B230453F7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD06FC83-694C-4B57-A665-4B230453F7A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

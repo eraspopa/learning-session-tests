@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace pure_selenium.Features
+namespace learning_session_tests.Features
 {
     using TechTalk.SpecFlow;
     
