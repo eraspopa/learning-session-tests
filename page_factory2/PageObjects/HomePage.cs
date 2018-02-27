@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using page_factory2.Tools;
 
 namespace page_factory2.PageObjects
 {
-    using static String;
     public class HomePage
     {
         public HomePage(IWebDriver driver)

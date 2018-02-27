@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using page_factory2.PageObjects;
 
 namespace page_factory2.Tools
 {
@@ -11,6 +7,6 @@ namespace page_factory2.Tools
     {
         public static IWebDriver Driver { get; set; }
         public const string Host = "http://lizas-test-site.gear.host";
-
+       
     }
 }
