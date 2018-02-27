@@ -117,36 +117,41 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The footer contains correct social icons links and copyrite message")]
-        public virtual void TheFooterContainsCorrectSocialIconsLinksAndCopyriteMessage()
+        [NUnit.Framework.DescriptionAttribute("The copyright message is shown on the footer")]
+        public virtual void TheCopyrightMessageIsShownOnTheFooter()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The footer contains correct social icons links and copyrite message", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The copyright message is shown on the footer", ((string[])(null)));
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "icon",
-                        "url"});
-            table2.AddRow(new string[] {
-                        "facebook",
-                        "facebook.com/daehyun.kim"});
-            table2.AddRow(new string[] {
-                        "pinterest",
-                        "pinterest.com/pin/102245854017904870/?lp=true"});
-            table2.AddRow(new string[] {
-                        "instagram",
-                        "instagram.com/explore/tags/moonassi/"});
-#line 23
-   testRunner.Then("social links have correct urls:", ((string)(null)), table2, "Then ");
-#line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "message"});
-            table3.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "Copyright © Your Website 2017"});
+#line 23
+   testRunner.Then("the copyright message is shown:", ((string)(null)), table2, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Social link navigates to the correct url")]
+        [NUnit.Framework.TestCaseAttribute("facebook", "facebook.com/daehyun.kim/", null)]
+        [NUnit.Framework.TestCaseAttribute("pinterest", "pinterest.com/pin/102245854017904870/?lp=true", null)]
+        [NUnit.Framework.TestCaseAttribute("instagram", "instagram.com/explore/tags/moonassi/", null)]
+        public virtual void SocialLinkNavigatesToTheCorrectUrl(string icon, string url, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Social link navigates to the correct url", exampleTags);
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line 3
+this.FeatureBackground();
 #line 28
-   testRunner.And("the copyright message is shown:", ((string)(null)), table3, "And ");
+   testRunner.When(string.Format("I click the {0} social icon", icon), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+   testRunner.Then(string.Format("I am redirected to the /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

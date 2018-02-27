@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using NUnit.Framework;
 using pure_selenium.Framework;
 using pure_selenium.PageObjects;
@@ -7,11 +8,11 @@ using TechTalk.SpecFlow;
 
 namespace pure_selenium.Steps
 {
-    
     using static Assert;
     using static StringAssert;
     using static String;
-    using static Browser;
+    using static BrowserTools;
+   
     [Binding]
     public class HomePageSteps
     {
@@ -38,8 +39,9 @@ namespace pure_selenium.Steps
         [Then(@"the following quote is shown on the main page:")]
         public void ThenTheFollowingQuoteIsShownOnTheMainPage(Table table)
         {
+            Thread.Sleep(10000);
             AreEqual(Join(" ", table.Rows.Select(r => r[0])),
-                _home.Main.QuoteText());
+                 _home.Main.QuoteText);
         }
         
         [Then(@"social links have correct urls:")]
@@ -48,14 +50,14 @@ namespace pure_selenium.Steps
             foreach (var row in table.Rows)
             {
                 Contains(row[1],_home.Footer.SocialLink(row[0]));
-            }
+           }
         }
         
         [Then(@"the copyright message is shown:")]
         public void ThenTheCopyrightMessageIsShown(Table table)
         {
             AreEqual(Join(" ", table.Rows.Select(r => r[0])),
-                _home.Header.Copyright());
+                _home.Footer.Copyright());
         }
 
         [Given(@"I am on the (.*) page")]

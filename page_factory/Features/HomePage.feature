@@ -19,15 +19,18 @@ Scenario: The artist's quote is shown on the home page
 			| people find meaningful and important something from the work. |
 			| I don't want to disturb the process.                          |
        
-Scenario: The footer contains correct social icons links and copyrite message
-			Then social links have correct urls:
-			| icon      | url                                           |
-			| facebook  | facebook.com/daehyun.kim                      |
-			| pinterest | pinterest.com/pin/102245854017904870/?lp=true |
-			| instagram | instagram.com/explore/tags/moonassi/          |
-			And the copyright message is shown:
+Scenario: The copyright message is shown on the footer
+			Then the copyright message is shown:
 			| message                       |
 			| Copyright © Your Website 2017 |
 
+Scenario Outline: Social link navigates to the correct url
+			When I click the <icon> social icon
+			Then I am redirected to the /<url> url
+			Examples: 
+			| icon      | url                                           |
+			| facebook  | facebook.com/daehyun.kim/                     |
+			| pinterest | pinterest.com/pin/102245854017904870/?lp=true |
+			| instagram | instagram.com/explore/tags/moonassi/          |
 
 

@@ -1,4 +1,5 @@
-﻿Feature: Feedback
+﻿@default
+Feature: Feedback
 
 Background: 
 			Given I am on the /Feedback page

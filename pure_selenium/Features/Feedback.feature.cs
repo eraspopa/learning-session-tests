@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace learning_session_tests.Features
+namespace pure_selenium.Features
 {
     using TechTalk.SpecFlow;
     
@@ -19,6 +19,7 @@ namespace learning_session_tests.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Feedback")]
+    [NUnit.Framework.CategoryAttribute("default")]
     public partial class FeedbackFeature
     {
         
@@ -31,7 +32,8 @@ namespace learning_session_tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feedback", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feedback", null, ProgrammingLanguage.CSharp, new string[] {
+                        "default"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,8 +67,8 @@ namespace learning_session_tests.Features
         
         public virtual void FeatureBackground()
         {
-#line 3
 #line 4
+#line 5
    testRunner.Given("I am on the /Feedback page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -78,15 +80,15 @@ namespace learning_session_tests.Features
         public virtual void TheFeedbackLinksNavigateToTheCorrectPages(string page, string link, string url, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The feedback links navigate to the correct pages", exampleTags);
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 7
-   testRunner.When(string.Format("I navigate to the /{0} page", page), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
 #line 8
-   testRunner.And(string.Format("click the grey navigation {0} link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.When(string.Format("I navigate to the /{0} page", page), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
+   testRunner.And(string.Format("click the grey navigation {0} link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
    testRunner.Then(string.Format("I am redirected to the correct /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -97,11 +99,11 @@ this.FeatureBackground();
         public virtual void TheFeedbacksAreShownInTheFeedbackSection()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The feedbacks are shown in the feedback section", ((string[])(null)));
-#line 15
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 16
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 17
    testRunner.Then("at least two items are shown in the feedback section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -112,27 +114,27 @@ this.FeatureBackground();
         public virtual void TheRequiredFieldMessageIsShownWhenTryingToSubmitTheEmptyForm()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The required field message is shown when trying to submit the empty form", ((string[])(null)));
-#line 18
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 19
-   testRunner.When("I navigate to the /Feedback/Create page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
 #line 20
+   testRunner.When("I navigate to the /Feedback/Create page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
    testRunner.And("I click the Send a message button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "message"});
             table1.AddRow(new string[] {
                         "The name is required."});
-#line 21
+#line 22
    testRunner.Then("the Name field shows the error message:", ((string)(null)), table1, "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "message"});
             table2.AddRow(new string[] {
                         "The comment is required."});
-#line 24
+#line 25
    testRunner.And("the Comment field shows the error message:", ((string)(null)), table2, "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -145,11 +147,11 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The invalid email field message is shown when trying to submit incorrect email va" +
                     "lue", ((string[])(null)));
-#line 28
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 29
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 30
    testRunner.When("I navigate to the /Feedback/Create page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -160,16 +162,16 @@ this.FeatureBackground();
                         "test",
                         "test",
                         "test"});
-#line 30
+#line 31
    testRunner.And("fill in following values:", ((string)(null)), table3, "And ");
-#line 33
+#line 34
    testRunner.And("I click the Send a message button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "message"});
             table4.AddRow(new string[] {
                         "Invalid email address."});
-#line 34
+#line 35
    testRunner.Then("the Email field shows the error message:", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -180,11 +182,11 @@ this.FeatureBackground();
         public virtual void TheCorrectValuesAreSubmitedAndDisplayedOnTheFeedbackPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The correct values are submited and displayed on the feedback page", ((string[])(null)));
-#line 38
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 39
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 40
    testRunner.When("I navigate to the /Feedback/Create page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -195,13 +197,13 @@ this.FeatureBackground();
                         "test",
                         "test@example.com",
                         "test"});
-#line 40
+#line 41
    testRunner.And("fill in following values:", ((string)(null)), table5, "And ");
-#line 43
-   testRunner.And("I click the Send a message button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 44
-   testRunner.Then("I am redirected to the /Feedback url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.And("I click the Send a message button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 45
+   testRunner.Then("I am redirected to the /Feedback url", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
    testRunner.And("the data is shown in the feedback section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
