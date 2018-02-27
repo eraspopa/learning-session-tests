@@ -1,4 +1,5 @@
-﻿Feature: HomePage
+﻿@default
+Feature: HomePage
 	
 Background: 
 			Given I am on the / page

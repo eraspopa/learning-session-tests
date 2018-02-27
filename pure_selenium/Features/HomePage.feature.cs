@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace learning_session_tests.Features
+namespace pure_selenium.Features
 {
     using TechTalk.SpecFlow;
     
@@ -19,6 +19,7 @@ namespace learning_session_tests.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("HomePage")]
+    [NUnit.Framework.CategoryAttribute("default")]
     public partial class HomePageFeature
     {
         
@@ -31,7 +32,8 @@ namespace learning_session_tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HomePage", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HomePage", null, ProgrammingLanguage.CSharp, new string[] {
+                        "default"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,8 +67,8 @@ namespace learning_session_tests.Features
         
         public virtual void FeatureBackground()
         {
-#line 3
 #line 4
+#line 5
    testRunner.Given("I am on the / page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -78,15 +80,15 @@ namespace learning_session_tests.Features
         public virtual void TheHeaderLinksNavigateToTheCorrectPages(string link, string url, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The header links navigate to the correct pages", exampleTags);
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
 #line 7
-   testRunner.When(string.Format("I click the {0} header link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
 #line 8
-   testRunner.Then(string.Format("I am redirected to the /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.When(string.Format("I click the {0} header link", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
+   testRunner.Then(string.Format("I am redirected to the /{0} url", url), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
    testRunner.And(string.Format("the page has correct {0} – Daehyun Kim title", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -97,9 +99,9 @@ this.FeatureBackground();
         public virtual void TheArtistsQuoteIsShownOnTheHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The artist\'s quote is shown on the home page", ((string[])(null)));
-#line 15
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -110,7 +112,7 @@ this.FeatureBackground();
                         "people find meaningful and important something from the work."});
             table1.AddRow(new string[] {
                         "I don\'t want to disturb the process."});
-#line 16
+#line 17
    testRunner.Then("the following quote is shown on the main page:", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -121,9 +123,9 @@ this.FeatureBackground();
         public virtual void TheFooterContainsCorrectSocialIconsLinksAndCopyriteMessage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The footer contains correct social icons links and copyrite message", ((string[])(null)));
-#line 22
+#line 23
 this.ScenarioSetup(scenarioInfo);
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -138,14 +140,14 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "instagram",
                         "instagram.com/explore/tags/moonassi/"});
-#line 23
+#line 24
    testRunner.Then("social links have correct urls:", ((string)(null)), table2, "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "message"});
             table3.AddRow(new string[] {
                         "Copyright © Your Website 2017"});
-#line 28
+#line 29
    testRunner.And("the copyright message is shown:", ((string)(null)), table3, "And ");
 #line hidden
             this.ScenarioCleanup();

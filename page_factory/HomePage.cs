@@ -8,6 +8,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace page_factory
 {
+    using static String;
     public class HomePage
     {
         private IWebDriver driver;
@@ -31,9 +32,9 @@ namespace page_factory
         [FindsBy(How = How.CssSelector, Using = ".site-footer p")]
         private IWebElement CopyrightMessage;
 
-        public string CopyrightMessageText => QuoteMessage.Text;
+        public string CopyrightMessageText => CopyrightMessage.Text;
 
-        [FindsBy(How = How.CssSelector, Using = "blockquote")]
+        [FindsBy(How = How.CssSelector, Using = "footer.site-footer p")]
         private IList<IWebElement> Comments;
 
         public int NumberOfComments => Comments.Count;
@@ -81,8 +82,9 @@ namespace page_factory
 
         public string WarningText(string field) => Warnings.Single(link => string.Equals(link.GetAttribute("for"), field)).Text;
 
-        [FindsBy(How = How.CssSelector, Using = "div.social a")]
+        [FindsBy(How = How.CssSelector, Using = "div.social a i")]
         public IList<IWebElement> SocialIcons;
-        public IList<string> SocialLink() => SocialIcons.Select(a=>a.GetAttribute("href")).ToList();
+
+        public void ClickSocialIcon(string icon) => SocialIcons.Single(link=>link.GetAttribute("class").Contains(icon)).Click();
     }
 }

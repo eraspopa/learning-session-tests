@@ -9,7 +9,12 @@ namespace pure_selenium.PageObjects
     {
         protected BaseSection(string css)
         {
-            Scope = driver.FindElement(By.CssSelector(css));
+            Scope = Driver.FindElement(By.CssSelector(css));
+        }
+
+        protected BaseSection()
+        {
+            
         }
         public IWebElement Scope { get; set; }
     }

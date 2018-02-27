@@ -3,18 +3,18 @@ using TechTalk.SpecFlow;
 
 namespace pure_selenium.Steps
 {
-    using static Browser;
+    using static BrowserTools;
 
     [Binding]
     public class CommonSteps
     {
-        [BeforeFeature]
+        [BeforeFeature("default")]
         public static void BeforeFeature()
         {
-            Start();
+            StartChrome();
         }
 
-        [AfterFeature]
+        [AfterFeature("default")]
         public static void AfterFeature()
         {
             Quit();

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Threading;
 using NUnit.Framework;
 using pure_selenium.Framework;
 using pure_selenium.PageObjects;
@@ -8,9 +10,8 @@ namespace pure_selenium.Steps
 {
     
     using static Assert;
-    using static StringAssert;
     using static String;
-    using static Browser;
+   
     [Binding]
     public class FeedbackSteps
     {
@@ -48,7 +49,7 @@ namespace pure_selenium.Steps
         [Then(@"at least two items are shown in the feedback section")]
         public void ThenAtLeastTwoItemsAreShownInTheFeedbackSection()
         {
-            IsTrue(_home.Main.Comments.Count >= 2);
+            IsTrue(_home.Main.Comments.Count>=2);
         }
 
         [Then(@"the (.*) field shows the error message:")]
@@ -62,8 +63,8 @@ namespace pure_selenium.Steps
 
         [Then(@"the data is shown in the feedback section")]
         public void ThenTheDataIsShownInTheFeedbackSection()
-
         {
+            Thread.Sleep(5000);
             AreEqual(_home.Main.LastCommentText, _comment);
             AreEqual(_home.Main.LastCommentAuthor,Concat(_name, "\r\n", _email));
         }

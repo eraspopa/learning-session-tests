@@ -10,7 +10,6 @@ namespace pure_selenium.PageObjects
         public Header(string css= "header.site-header") :base(css)
         {
         }
-        public void ClickHeaderLink(string link)=> driver.FindElement(By.XPath($"//nav[@class='site-navigation']//a[.='{link}']")).Click();
-        public string Copyright() => driver.FindElement(By.CssSelector(".social p")).Text;
-    }
+        public void ClickHeaderLink(string link)=> Driver.FindElement(By.XPath($"//nav[@class='site-navigation']//a[.='{link}']")).Click();
+   }
 }
