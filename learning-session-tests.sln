@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "page_factory", "page_factor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "page_factory2", "page_factory2\page_factory2.csproj", "{355B2523-597E-4160-86BF-94A165BDAE3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coypu-tests", "coypu-tests\coypu-tests.csproj", "{1C1568F0-909C-484F-893C-7B9AEA775BF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{355B2523-597E-4160-86BF-94A165BDAE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{355B2523-597E-4160-86BF-94A165BDAE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{355B2523-597E-4160-86BF-94A165BDAE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1568F0-909C-484F-893C-7B9AEA775BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1568F0-909C-484F-893C-7B9AEA775BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1568F0-909C-484F-893C-7B9AEA775BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1568F0-909C-484F-893C-7B9AEA775BF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
