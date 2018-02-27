@@ -6,33 +6,19 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
-namespace page_factory
+namespace page_factory2.PageObjects
 {
-    using static String;
-    public class HomePage
+    public class Main:BaseSection
     {
-        private IWebDriver driver;
-
-        public HomePage(IWebDriver driver)
+        public Main(IWebDriver driver) : base(driver)
         {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
+            
         }
-
-        [FindsBy(How = How.CssSelector, Using = "nav.site-navigation a")]
-        private IList<IWebElement> NavLinks;
-
-        public void ClickNavLink(string linkText) => NavLinks.Single(link => string.Equals(link.Text, linkText)).Click();
-
         [FindsBy(How = How.CssSelector, Using = ".site-content q")]
         private IWebElement QuoteMessage;
 
         public string QuoteMessageText => QuoteMessage.Text;
 
-        [FindsBy(How = How.CssSelector, Using = ".site-footer p")]
-        private IWebElement CopyrightMessage;
-
-        public string CopyrightMessageText => CopyrightMessage.Text;
 
         [FindsBy(How = How.CssSelector, Using = "div.container blockquote")]
         private IList<IWebElement> Comments;
@@ -44,7 +30,7 @@ namespace page_factory
 
         public string LatestCommentText => LatestComment.Text;
 
-        [FindsBy(How = How.CssSelector,Using = ".container blockquote:last-child cite")]
+        [FindsBy(How = How.CssSelector, Using = ".container blockquote:last-child cite")]
         private IWebElement LatestCommentAuthor;
 
         public string LatestCommentAuthorText => LatestCommentAuthor.Text;
@@ -55,11 +41,11 @@ namespace page_factory
         [FindsBy(How = How.CssSelector, Using = "input#Email")]
         private IWebElement EmailField;
 
-       
+
         [FindsBy(How = How.CssSelector, Using = "input#Comment")]
         private IWebElement CommentField;
 
-       
+
         public void LeaveComment(string name, string email, string comment)
         {
             NameField.SendKeys(name);
@@ -75,16 +61,11 @@ namespace page_factory
         [FindsBy(How = How.CssSelector, Using = "input.main-btn")]
         private IWebElement Button;
 
-        public void ClickButton()=> Button.Click();
-        
-        [FindsBy(How = How.CssSelector,Using = "span.text-danger span")]
+        public void ClickButton() => Button.Click();
+
+        [FindsBy(How = How.CssSelector, Using = "span.text-danger span")]
         private IList<IWebElement> Warnings;
 
         public string WarningText(string field) => Warnings.Single(link => string.Equals(link.GetAttribute("for"), field)).Text;
-
-        [FindsBy(How = How.CssSelector, Using = "div.social a i")]
-        public IList<IWebElement> SocialIcons;
-
-        public void ClickSocialIcon(string icon) => SocialIcons.Single(link=>link.GetAttribute("class").Contains(icon)).Click();
     }
 }

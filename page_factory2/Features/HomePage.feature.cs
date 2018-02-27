@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace page_factory.Features
+namespace page_factory2.Features
 {
     using TechTalk.SpecFlow;
     
